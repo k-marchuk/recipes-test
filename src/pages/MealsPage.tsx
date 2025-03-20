@@ -97,7 +97,7 @@ export const MealsPage = () => {
         <Pagination
           className="ant-pagination mt-10"
           current={page}
-          total={mealsData.meals.length}
+          total={mealsData?.meals?.length || 0}
           pageSize={10}
           onChange={(currentPage) => setPage(currentPage)}
         />
