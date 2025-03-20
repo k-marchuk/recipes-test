@@ -8,7 +8,7 @@ type Props = {
 export const MealCard: React.FC<Props> = ({ meal }) => {
   const { strMealThumb, strMeal, strCategory, strArea, idMeal } = meal;
 
-  const addToLocalStorage = (meal) => {
+  const addToLocalStorage = (meal: Meal) => {
     localStorage.setItem('meals', meal.idMeal);
   };
 

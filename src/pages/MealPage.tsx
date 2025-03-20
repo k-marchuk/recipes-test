@@ -27,7 +27,7 @@ export const MealPage = () => {
     const measure = meal[`strMeasure${i}` as keyof Meal];
 
     if (ingredient && measure) {
-      ingredients.push({ [ingredient]: measure });
+      ingredients.push({ [ingredient as string]: measure });
     }
   }
 
@@ -87,7 +87,8 @@ export const MealPage = () => {
                 className="mt-2 text-sm font-medium text-gray-600"
                 key={`${ingredient} + ${index}`}
               >
-                {Object.keys(ingredient)[0]}: {Object.values(ingredient)[0]}
+                {Object.keys(ingredient)[0]}:{' '}
+                {Object.values(ingredient)[0] as string}
               </p>
             );
           })}
